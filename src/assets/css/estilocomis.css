@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal de comics */
+.comicsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.comicDiv {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.comicDiv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el botón de favorito */
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e45a5a;
+}
+
+/* Fondo de imagen del comic */
+.comicDiv img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Título del comic */
+.comicDiv h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Descripción del comic */
+.comicDiv p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Año de publicación */
+.year {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Diferenciación de favorito con transición de color */
+.nofav {
+    background-color: #e9e9e9;
+}
+
+.fav {
+    background-color: #ffc675;
+    box-shadow: 0 4px 10px rgba(255, 182, 77, 0.3);
+    transition: background-color 1s ease;
+}
+
+
+/* Estilo del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    transition: border 0.3s ease;
+}
+
+.form input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 10px #28a746a2;
+}
+
+/* Botón de submit */
+.form button {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1c692e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Efecto en la animación de click */
+.form button:active {
+    transform: scale(1);
+}
