@@ -2,10 +2,11 @@
     <div class="menu-container">
       <ul class="menu">
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/deportes">Deportes</router-link></li>
+        <li v-for="(num, index) in numeros" :key="index"><router-link :to="'/tablamultiplicar/' + num">Tabla del {{ num }}</router-link></li>
+        <!-- <li><router-link to="/deportes">Deportes</router-link></li>
         <li><router-link to="/comics">Cómics</router-link></li>
         <li><router-link to="/checkbox">CheckBox</router-link></li>
-        <li v-for="num in numeros" :key="num"><router-link :to="'/numerodoble/' + num">Doble</router-link></li>
+        <li v-for="num in numeros" :key="num"><router-link :to="'/numerodoble/' + num">Doble</router-link></li>  -->
       </ul>
     </div>
   </template>
@@ -15,8 +16,13 @@
     name: 'MenuComponent',
     data() {
       return{
-        numeros: [1,2,3,4]
+        numeros: []
       }
+    },
+    mounted() {
+        for(let i = 0; i < 5; i ++){
+            this.numeros.push(parseInt(Math.random() * 10) + 1)
+        }
     }
   }
   </script>
